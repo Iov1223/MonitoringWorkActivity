@@ -1,15 +1,19 @@
 #include <iostream>
-#include <Windows.h>
+#include <windows.h>
 #include <fstream>
 #include <thread>
 #include <string>
 #include <ShlObj.h>
 #include <Lmcons.h>
+#include <sstream>
+#include <iomanip>
+#include <filesystem>
 //#include <winsock2.h>
 //#include <ws2tcpip.h>
 
 //#pragma comment(lib, "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\\ws2_32.lib")
 
+// имя пользователя
 std::string getUsername() {
     char username[UNLEN + 1];
     DWORD usernameLength = UNLEN + 1;
@@ -21,7 +25,7 @@ std::string getUsername() {
         return "Не удалось получить имя пользователя";
     }
 }
-
+// имя компьютера
 std::string getComputerName() {
     char computerName[MAX_COMPUTERNAME_LENGTH + 1];
     DWORD computerNameLength = MAX_COMPUTERNAME_LENGTH + 1;
@@ -33,7 +37,22 @@ std::string getComputerName() {
         return "Не удалось получить имя компьютера";
     }
 }
+// имя домен
+std::string getDomainName() {
+    char domainName[MAX_PATH + 1];
+    DWORD domainNameLength = MAX_PATH + 1;
 
+    if (GetComputerNameExA(ComputerNameDnsDomain, domainName, &domainNameLength)) {
+        return std::string(domainName);
+    }
+    else {
+        return "Не удалось получить доменное имя";
+    }
+}
+
+
+
+// IP-адрес
 //std::string getIPAddress() {
 //    WSADATA wsaData;
 //    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
@@ -77,10 +96,11 @@ void foo() {
     short a = 1;
 
     while (true) {
-        std::ofstream file( "C:\\Users\\IdeaPad\\source\\repos\\MonitoringWorkActivity\\MonitoringWorkActivity\\example.txt", std::ios::app);
+        std::ofstream file("example.txt", std::ios::app);
 
         if (file.is_open()) {
-            file << getUsername() << " " << getComputerName() << " " << a << std::endl;
+            file << "Username: " + getUsername() + "\nComputerName: " + getComputerName() + 
+                "\nDomain: " + getDomainName() << a << std::endl;
             file.close();
             a++;
         }
@@ -112,6 +132,8 @@ int main() {
 
     //addAutoUpload();
     foo();
+    
 
     return 0;
 }
+ 

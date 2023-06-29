@@ -1,14 +1,31 @@
-IdeaPad DESKTOP-J88FP8S 1
-IdeaPad DESKTOP-J88FP8S 1
-IdeaPad DESKTOP-J88FP8S 2
-IdeaPad DESKTOP-J88FP8S 1
-IdeaPad DESKTOP-J88FP8S 2
-IdeaPad DESKTOP-J88FP8S 1
-IdeaPad DESKTOP-J88FP8S 2
-IdeaPad DESKTOP-J88FP8S 3
-IdeaPad DESKTOP-J88FP8S 4
-IdeaPad DESKTOP-J88FP8S 5
-IdeaPad DESKTOP-J88FP8S 6
-IdeaPad DESKTOP-J88FP8S 7
-IdeaPad DESKTOP-J88FP8S 8
-IdeaPad DESKTOP-J88FP8S 9
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 
+Time: Не удалось открыть файл для чтения.5
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 
+Time: Не удалось открыть файл для чтения.6
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 
+Time: Не удалось открыть файл для чтения.7
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 
+Time: Не удалось открыть файл для чтения.8
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 1
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 2
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 3
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 4
+Username: IdeaPad
+ComputerName: DESKTOP-J88FP8S
+Domain: 5
